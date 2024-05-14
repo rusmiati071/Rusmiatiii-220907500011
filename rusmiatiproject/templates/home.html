@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitrahijab</title>
+    <title>MitraShop - About</title>
     <style>
+        /* CSS Anda di sini */
         @keyframes moveText {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0); }
         }
-
         body {
             background-color: pink;
+            background-size: contain; /* Mengubah ukuran background menjadi contain */
+            background-position: center; /* Posisikan gambar ke tengah */
             text-align: center; /* Menata konten secara horizontal di tengah */
             font-family: Arial, sans-serif; /* Menetapkan jenis font untuk seluruh body */
             margin: 0; /* Menghilangkan margin bawaan pada body */
         }
-
         h1.judul {
             color: white;
             margin: 0; /* Menghapus margin bawaan dari h1 */
             font-family: 'Arial Black', sans-serif; /* Ganti font menjadi Arial Black atau font lain yang Anda suka */
         }
-
         header {
             background-color: #e75480; 
             padding: 10px; 
@@ -64,19 +64,15 @@
         .foto-container {
             display: flex; 
             justify-content: center; 
+            flex-direction: column; /* Mengubah arah tata letak menjadi vertikal */
+            align-items: center; /* Pusatkan konten secara horizontal */
             margin-bottom: 20px; /* Menambahkan margin ke bawah agar tidak terlalu dekat dengan daftar produk */
         }
-
-        img.foto {
-            width: 100px; /* Menetapkan lebar gambar */
+        .foto-container img {
+            width: 100%; /* Menetapkan lebar gambar menjadi penuh */
+            height: auto; /* Menetapkan tinggi gambar agar sesuai dengan lebar */
             margin: 10px; /* Memberikan jarak antara gambar */
         }
-
-        .product-info {
-            color: white;
-            text-align: center;
-        }
-
         a.link-produk {
             display: block;
             color: white;
@@ -84,12 +80,10 @@
             margin: 10px auto; 
             width: fit-content; 
         }
-
         nav.menu {
             color: white;
             text-align: center;
         }
-
         .mitrashopp {
             margin-top: 20px; /* Tambahkan margin ke atas */
         }
@@ -98,7 +92,6 @@
             display: flex;
             justify-content: center;
         }
-
         footer {
             display: flex;
             justify-content: space-between;
@@ -106,29 +99,71 @@
             background-color: #e75480;
             color: white;
             padding: 10px;
-            position: fixed; /* Menjadikan footer menempel di bawah */
-            bottom: 0; /* Menempatkan footer di bagian bawah halaman */
             width: 100%; /* Memberikan lebar penuh pada footer */
         }
-
         .menu {
             margin-right: auto; /* Mendorong menu ke kiri */
         }
         .contact-info {
-    margin: 0 auto; /* Mengatur margin atas dan bawah menjadi 0, dan margin kiri-kanan menjadi auto */
-    text-align: center; /* Untuk mengatur teks menjadi rata tengah */
-}
+            margin: 0 auto; /* Mengatur margin atas dan bawah menjadi 0, dan margin kiri-kanan menjadi auto */
+            text-align: center; /* Untuk mengatur teks menjadi rata tengah */
+        }
+        .map-container {
+            width: 100%;
+            width: 400px; /* Maksimum lebar peta */
+            height: 300px; /* Tinggi peta */
+            margin: 10px auto; /* Menambahkan margin di atas dan bawah peta */
+        }
+        /* Gaya untuk formulir masukan */
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px; /* Maksimum lebar formulir */
+            height: 300; /*tinggi formulir */
+            margin-bottom: 10px; /* Menambahkan margin di bawah formulir */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            height: 100px;
+        }
+        button[type="submit"] {
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ee4d2d;
+            color: white;
+            cursor: pointer;
+        }
+        /* Gaya untuk menampilkan formulir dan peta secara sejajar */
+        .footermaps {
+            display: flex;
+            justify-content: center; /* Menengahkan elemen-elemen */
+        }
+        .footermaps > * {
+            margin: 0 10px; /* Memberikan margin antara elemen formulir dan peta */
+        }
     </style>
 </head>
 <body>
     <header>
         <!-- Ganti logo dengan gambar yang diberikan -->
-        <img src="https://i.pinimg.com/736x/8a/f6/23/8af62398363e417d87810c8e785692fb.jpg" alt="Logo" class="logo">
+        <span class="logo" style="font-size: 30px; font-weight: bold; color: white;">MitraShop</span>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Produk</a>
-            <a href="#">Keranjang</a>
+            <a href="index.html">Home</a>
+            <a href="index.html">About</a>
+            <a href="index.html">Produk</a>
+            <a href="index.html">Kategori</a>
+            <a href="index.html">Keranjang</a>
         </nav>
         <div class="search-box">
             <input type="text" placeholder="Cari produk...">
@@ -137,27 +172,29 @@
     </header>
     <!-- Tambahkan gambar-gambar -->
     <div class="foto-container gambar-container">
-        <img src="https://i.pinimg.com/736x/8f/78/4e/8f784ece8d04f41e1e56daa333a3213d.jpg" alt="Deskripsi Gambar 1" style="width: 2000px;">
+        <img src="https://i.pinimg.com/736x/0e/63/b9/0e63b99fb1e687165a59809b1e8bc759.jpg" alt="Deskripsi Gambar">
+    </div> 
+</div>
+    <!-- Formulir Masukan dan Peta -->
+    <div class="footermaps">
+        <form>
+            <input type="text" name="nama" placeholder="Nama">
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="pesan" placeholder="Pesan"></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.535364452824!2d106.81214641736619!3d-6.212346674637146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02b0732892eb%3A0x104af10d145bba8b!2sMonas%2C%20Gambir%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1619910625365!5m2!1sen!2sid" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </div>
+    <!-- Daftar produk -->
     <ul>
-        <!-- {% for product in products %} -->
-            <!-- <li class="product-info"> -->
-                <!-- <h2>{{ product.name }}</h2> -->
-                <!-- <p>Category: {{ product.category }}</p> -->
-                <!-- <p>Price: ${{ product.price }}</p> -->
-                <!-- <a href="{% url 'product_detail' product_id=product.id %}" class="link-produk">View Details</a> -->
-            <!-- </li> -->
-        <!-- {% endfor %} -->
     </ul>
-    
+    <!-- Footer -->
     <footer>
-        <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        </nav>
         <div class="contact-info">
-        <p>Email: MitraShop@gmail.com</p>
-        <p>Phone: +62-852-565-78700</p>
+            <p>Email: MitraShop@gmail.com</p>
+            <p>Phone: +62-852-565-78700</p>
         </div>  
     </footer>
 </body>
